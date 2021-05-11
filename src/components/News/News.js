@@ -2,7 +2,6 @@ import { React, useEffect, useLayoutEffect, useState } from "react";
 import { auth, db } from "../../Firebase";
 import { Form, Input, Col, Row, Select,Layout } from "antd";
 import { Editor } from "@tinymce/tinymce-react";
-import dropify from 'dropify'
 import './new.css'
 const { Option } = Select;
 const { TextArea } = Input;
@@ -26,11 +25,7 @@ function News({ user }) {
 	// 		tinycomments_mode: "embedded",
 	// 		tinycomments_author: "Author name",
 	// 	});
-	useLayoutEffect(() => {
-		let dropfyitems = document.body.getElementsByClassName('.dropify')
-		
-
-	}, [])
+	
 	return (
 		<Form className="m-2 border border-success rounded">
 			<div className="m-2 mt-1">
