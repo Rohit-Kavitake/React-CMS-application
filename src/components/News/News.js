@@ -1,7 +1,9 @@
-import { React, useState } from "react";
+import { React, useEffect, useLayoutEffect, useState } from "react";
 import { auth, db } from "../../Firebase";
-import { Form, Input, Col, Row, Select } from "antd";
+import { Form, Input, Col, Row, Select,Layout } from "antd";
 import { Editor } from "@tinymce/tinymce-react";
+import dropify from 'dropify'
+import './new.css'
 const { Option } = Select;
 const { TextArea } = Input;
 // import "https://cdn.tiny.cloud/1/32ol4u0idlw2jop5zyaaywgcjwwvm5h3ro1okg0dvomwafgv/tinymce/5/tinymce.min.js";
@@ -24,9 +26,13 @@ function News({ user }) {
 	// 		tinycomments_mode: "embedded",
 	// 		tinycomments_author: "Author name",
 	// 	});
+	useLayoutEffect(() => {
+		let dropfyitems = document.body.getElementsByClassName('.dropify')
+		
 
+	}, [])
 	return (
-		<div className="m-2 border border-success rounded">
+		<Form className="m-2 border border-success rounded">
 			<div className="m-2 mt-1">
 				<h2 className="text-center mt-2">Add News</h2>
 				<hr></hr>
@@ -81,7 +87,7 @@ function News({ user }) {
 					</Row>
 				</Input.Group>
 			</div>
-		</div>
+		</Form>
 	);
 }
 
