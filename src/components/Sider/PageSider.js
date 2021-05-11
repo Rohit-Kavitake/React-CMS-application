@@ -1,5 +1,5 @@
 import { React, useState,useEffect } from "react";
-import { Layout, Menu } from "antd";
+import { Layout, Menu, 	 } from "antd";
 import {
 	MessageTwoTone,
 	HomeTwoTone,
@@ -11,7 +11,7 @@ import { oauth } from "../../Firebase"
 const { Sider } = Layout;
 
 function PageSider() {
-	const [collapsed, setCollapsed] = useState(false);
+	const [collapsed, setCollapsed] = useState(true);
 
 	const signOut = () => {
 		// User Google Signout
@@ -20,6 +20,7 @@ function PageSider() {
 
 	return (
 		<Sider
+		breakpoint='lg'
 			collapsedWidth="60"
 			collapsible
 			collapsed={collapsed}
