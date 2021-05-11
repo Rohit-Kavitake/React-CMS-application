@@ -5,7 +5,6 @@ import { Editor } from "@tinymce/tinymce-react";
 import './new.css'
 const { Option } = Select;
 const { TextArea } = Input;
-// import "https://cdn.tiny.cloud/1/32ol4u0idlw2jop5zyaaywgcjwwvm5h3ro1okg0dvomwafgv/tinymce/5/tinymce.min.js";
 
 function News({ user }) {
 	const collectionName = user;
@@ -15,17 +14,7 @@ function News({ user }) {
 	const [Description, setDescription] = useState("");
 	const [ImageUrl, setImageUrl] = useState("");
 	const [FileUrl, setFileUrl] = useState("");
-	// tinymce.init({
-	// 		selector: "textarea",
-	// 		plugins:
-	// 			"a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker",
-	// 		toolbar:
-	// 			"a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table",
-	// 		toolbar_mode: "floating",
-	// 		tinycomments_mode: "embedded",
-	// 		tinycomments_author: "Author name",
-	// 	});
-	
+
 	return (
 		<Form className="m-2 border border-success rounded">
 			<div className="m-2 mt-1">
@@ -33,7 +22,7 @@ function News({ user }) {
 				<hr></hr>
 				<Input.Group>
 					<Row gutter={[16, 16]} className="mb-2">
-						<Col span={16} xs={24} sm={16} lg={6} xl={4}>
+						<Col span={16} xs={24} sm={16} lg={16} xl={16}>
 							<Input
 								defaultValue={newsHeader}
 								placeholder="News Header"

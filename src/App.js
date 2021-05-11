@@ -18,12 +18,14 @@ const { Content } = Layout;
 
 function App() {
 	const [username, setUserName] = useState("Anonymous");
+	const [user, setUser] = useState({});
 	const initFirebaseAuth = () => {
 		oauth.onAuthStateChanged(authStateObserver);
 	};
 
 	const authStateObserver = async (user) => {
 		if (user) {
+			setUser(user)
 			setUserName(user.displayName)
 			console.log(user.displayName);
 			console.log("User Logged in");
@@ -54,7 +56,7 @@ function App() {
 							<PageSider />
 							<Content>
 								<Route path="/dashboard">
-									<Dashboard user={username} />
+									<Dashboard user={user} />
 								</Route>
 								<Route path="/news">
 									<News user={username} />
