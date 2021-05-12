@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%PUBLIC_URL%/Logo.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.00" />
 		<meta name="theme-color" content="#000000" />
 		<meta
 			name="description"
@@ -24,7 +24,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://cdn.tiny.cloud/1/32ol4u0idlw2jop5zyaaywgcjwwvm5h3ro1okg0dvomwafgv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-		<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous"></script>		<!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -66,7 +66,7 @@
 	<script>
 		$(document).ready(function(){
 			// Basic
-			$('.dropify').dropify();
+			window.$('#dropify').dropify();
 		});
 	</script>
 
